@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Keyword</title>
+</head>
+<body>
+  <h2>➕ Add Keyword</h2>
+  <form method="POST" action="/dashboard/add" enctype="multipart/form-data">
+    <label>Keyword:</label>
+    <input type="text" name="keyword" required /><br><br>
+
+    <label>Reply Text:</label>
+    <textarea name="reply_text" required></textarea><br><br>
+
+    <label>Reply Image:</label>
+    <input type="file" name="image" accept="image/*" /><br><br>
+
+    <label>Attachment File:</label>
+    <input type="file" name="attachment" /><br><br>
+
+    <button type="submit">Save</button>
+  </form>
+  <br>
+  <a href="/dashboard">⬅️ Back to Dashboard</a>
+</body>
+</html>

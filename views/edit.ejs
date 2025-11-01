@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Keyword</title>
+</head>
+<body>
+  <h2>✏️ Edit Keyword</h2>
+  <form method="POST" action="/dashboard/edit/<%= keyword.id %>" enctype="multipart/form-data">
+    <label>Keyword:</label>
+    <input type="text" name="keyword" value="<%= keyword.keyword %>" required /><br><br>
+
+    <label>Reply Text:</label>
+    <textarea name="reply_text" required><%= keyword.reply_text %></textarea><br><br>
+
+    <% if (keyword.reply_image) { %>
+      <p>Current Image:</p>
+      <img src="/<%= keyword.reply_image %>" width="100" /><br>
+      <label><input type="checkbox" name="remove_image" value="1"> Remove Image</label><br><br>
+    <% } %>
+
+    <% if (keyword.attachment_file) { %>
+      <p>Current Attachment: <a href="/<%= keyword.attachment_file %>" target="_blank">Download</a></p>
+      <label><input type="checkbox" name="remove_attachment" value="1"> Remove Attachment</label><br><br>
+    <% } %>
+
+    <label>New Image (optional):</label>
+    <input type="file" name="image" accept="image/*" /><br><br>
+
+    <label>New Attachment (optional):</label>
+    <input type="file" name="attachment" /><br><br>
+
+    <button type="submit">Update</button>
+  </form>
+  <br>
+  <a href="/dashboard">⬅️ Back to Dashboard</a>
+</body>
+</html>
