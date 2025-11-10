@@ -1,0 +1,60 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 60px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+/* Logo */
+.logo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Name */
+.name {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ffb347, #ffcc33);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
